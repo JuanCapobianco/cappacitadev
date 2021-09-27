@@ -33,7 +33,7 @@ header{
 .search{
     background-color: var(--primary-color);
     border: 3px solid #fff;
-    padding:0.8rem 5.3rem;
+    padding:0.8rem 3.0rem;
     border-radius: 8px;
     font-size: 1rem;
     color:#fff;
