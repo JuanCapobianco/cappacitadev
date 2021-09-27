@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:#261C2C;
+    --secondary-color: #3E2C41;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Yaldevi', sans-serif;
+    margin: 0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 17%;
+}
+
+header{
+    padding:1rem;
+    display:flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+
+.search{
+    background-color: var(--primary-color);
+    border: 3px solid #fff;
+    padding:0.8rem 5.3rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color:#fff;
+    font-family: inherit;
+}
+
+.search:focus{
+    outline:0;
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 250px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 10px rgba(0,0,0,0.4);
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+}
+
+
+.movie img{
+    width:100%;
+}
+
+.movie-info{
+    color:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color:lightgreen;
+}
+
+.movie-info span.orange{
+    color:orange;
+}
+
+.movie-info span.red{
+    color:red;
+}
+
+.sinopse{
+	font-size: small;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(110, 133, 178,0.8);
+	backdrop-filter: blur(25px);
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateX(-101%);
+    transition:transform 0.2s ease-in;
+	color: #fff;
+}
+
+.movie:hover .sinopse{
+    transform:translateY(0)
+}
+
+#tags{
+    width:90%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.tag{
+    color:white;
+    padding:10px 20px;
+    background-color: #5C527F;
+    border-radius: 3px;
+    margin:5px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: #6E85B2;
+}
+.no-results{
+    color:white;
+}
+
+.pagination{
+    display:flex;
+    margin:10px 30px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.page{
+    padding:20px;
+    cursor:pointer;
+}
+
+.page.disabled{
+    cursor:not-allowed;
+    color:grey;
+}
+
+.atual{
+    padding: 8px 20px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-size: 25px;
+    font-weight: 600;
+}
